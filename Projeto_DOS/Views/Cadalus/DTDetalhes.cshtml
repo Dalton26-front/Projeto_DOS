@@ -1,0 +1,137 @@
+﻿@model Projeto_DOS.Models.Cadalu
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Detalhes</title>
+</head>
+<body>
+    <div class="container bg-success p-sm-2 text-sm-center">
+        <h3>Detalhes - @Html.DisplayFor(model => model.Nome)</h3>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3 justify-content-center">
+                <label asp-for="NFicha" class="control-label"></label>
+                @Html.DisplayFor(model => model.NFicha)
+            </div>
+            <dv class="col-sm-3">
+                <label asp-for="NoCIC" class="control-label"></label>
+                @Html.DisplayFor(model => model.NoCIC)
+            </dv>
+            <div class="col-sm-3">
+                <label asp-for="CodCuR" class="control-label"></label>
+                @Html.DisplayFor(model => model.CodCuR)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Turma" class="control-label"></label>
+                @Html.DisplayFor(model => model.Turma)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <label asp-for="CodAlu" class="control-label"></label>
+                @Html.DisplayFor(model => model.CodAlu)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Nome" class="control-label"></label>
+                @Html.DisplayFor(model => model.Nome)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Apelido" class="control-label"></label>
+                @Html.DisplayFor(model => model.Apelido)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Fpag" class="control-label"></label>
+                @Html.DisplayFor(model => model.Fpag)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <label asp-for="Dia" class="control-label"></label>
+                @Html.DisplayFor(model => model.Dia)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Curri" class="control-label"></label>
+                @Html.DisplayFor(model => model.Curri)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Certi" class="control-label"></label>
+                @Html.DisplayFor(model => model.Certi)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Histo" class="control-label"></label>
+                @Html.DisplayFor(model => model.Histo)
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3">
+                <label asp-for="CIC" class="control-label"></label>
+                @Html.DisplayFor(model => model.CIC)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="RG" class="control-label"></label>
+                @Html.DisplayFor(model => model.RG)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Crea" class="control-label"></label>
+                @Html.DisplayFor(model => model.Crea)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Contrato" class="control-label"></label>
+                @Html.DisplayFor(model => model.Contrato)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <label asp-for="Foto" class="control-label"></label>
+                @Html.DisplayFor(model => model.Foto)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="EmDia" class="control-label"></label>
+                @Html.DisplayFor(model => model.EmDia)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Status" class="control-label"></label>
+                @Html.DisplayFor(model => model.Status)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Lista" class="control-label"></label>
+                @Html.DisplayFor(model => model.Lista)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <label asp-for="Lista" class="control-label"></label>
+                @Html.DisplayFor(model => model.Lista)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Carta" class="control-label"></label>
+                @Html.DisplayFor(model => model.Carta)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="DataInc" class="control-label"></label>
+                @Html.DisplayFor(model => model.DataInc)
+            </div>
+            <div class="col-sm-3">
+                <label asp-for="Status1" class="control-label"></label>
+                @Html.DisplayFor(model => model.Status1)
+            </div>
+        </div>
+        <div>
+        </div>
+        <div>
+            <a asp-action="DTEditar" class="btn btn-primary" asp-route-id="@Model.ID">Editar</a>
+            <a asp-action="Index" class="btn btn-dark">Voltar a Lista</a>
+        </div>
+    </div>
+</body>
+</html>

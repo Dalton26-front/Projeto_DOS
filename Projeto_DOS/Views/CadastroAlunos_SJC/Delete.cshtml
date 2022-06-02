@@ -1,0 +1,236 @@
+﻿@model Projeto_DOS.Models.CadastroAlunos_SJC
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <title>Delete</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Tem Certeza que Deseja Excluir este Aluno?</h3>
+        <div>
+            <h4>Cadastro Alunos - SJC</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.NOCIC)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.NOCIC)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.NOME)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.NOME)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.SEXO)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.SEXO)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ENDERECO)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ENDERECO)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CIDADE)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CIDADE)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.BAIRRO)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.BAIRRO)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ESTADO)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ESTADO)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CEP)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CEP)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.FONE)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.FONE)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PAI)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PAI)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.MAE)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.MAE)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.NASCIMENTO)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.NASCIMENTO)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.LOCALNASC)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.LOCALNASC)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.UFNASC)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.UFNASC)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RG)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.RG)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ORGAO)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ORGAO)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.UFEMIS)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.UFEMIS)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ESTADOCIVI)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ESTADOCIVI)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PROFISSAO)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PROFISSAO)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.EMPRESA)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.EMPRESA)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.DEPTO)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.DEPTO)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CARGO)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CARGO)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RESPRH)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.RESPRH)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CURSOG)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CURSOG)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.FACULDADE)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.FACULDADE)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ANO)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ANO)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CIDG)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CIDG)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.UFG)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.UFG)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.FONEC)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.FONEC)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.RAMAL)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.RAMAL)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CELULAR)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CELULAR)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.FONE1)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.FONE1)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.EMAIL)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.EMAIL)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.NROCREA)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.NROCREA)
+                </dd>
+            </dl>
+        </div>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="ID" />
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            <a class="btn btn-dark" asp-action="Index">Voltar a Lista</a>
+        </form>
+    </div>
+</body>
+</html>

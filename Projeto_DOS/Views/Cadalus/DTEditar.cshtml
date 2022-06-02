@@ -1,0 +1,259 @@
+﻿@model Projeto_DOS.Models.Cadalu
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Editar</title>
+</head>
+<body>
+    <div class="container">
+        <h4 class="bg-success p-sm-2 text-sm-center">Cadastro de Aluno</h4>
+    </div>
+    <form asp-action="DTEditar">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="ID" />
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="NFicha" class="control-label m-0"></label>
+                        <input asp-for="NFicha" class="form-control" />
+                        <span asp-validation-for="NFicha" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="NoCIC" class="control-label m-0"></label>
+                        <input asp-for="NoCIC" class="form-control" />
+                        <span asp-validation-for="NoCIC" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="CodCuR" class="control-label m-0"></label>
+                        <input asp-for="CodCuR" class="form-control" />
+                        <span asp-validation-for="CodCuR" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Turma" class="control-label m-0"></label>
+                        <input asp-for="Turma" class="form-control" />
+                        <span asp-validation-for="Turma" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="CodAlu" class="control-label m-0"></label>
+                        <input asp-for="CodAlu" class="form-control" />
+                        <span asp-validation-for="CodAlu" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Nome" class="control-label m-0"></label>
+                        <input asp-for="Nome" class="form-control" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Apelido" class="control-label m-0"></label>
+                        <input asp-for="Apelido" class="form-control" />
+                        <span asp-validation-for="Apelido" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Fpag" class="control-label m-0"></label>
+                        <input asp-for="Fpag" class="form-control" />
+                        <span asp-validation-for="Fpag" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Dia" class="control-label m-0"></label>
+                        <input asp-for="Dia" class="form-control" />
+                        <span asp-validation-for="Dia" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                    <label asp-for="Curri" class="control-label m-0"></label>
+                    <input asp-for="Curri" class="form-control" />
+                    <span asp-validation-for="Curri" class="text-danger"></span>
+                </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Certi" class="control-label m-0"></label>
+                        <input asp-for="Certi" class="form-control" />
+                        <span asp-validation-for="Certi" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Histo" class="control-label m-0"></label>
+                        <input asp-for="Histo" class="form-control" />
+                        <span asp-validation-for="Histo" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="CIC" class="control-label m-0"></label>
+                        <input asp-for="CIC" class="form-control" />
+                        <span asp-validation-for="CIC" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="CIC" class="control-label m-0"></label>
+                        <input asp-for="CIC" class="form-control" />
+                        <span asp-validation-for="CIC" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="CIC" class="control-label m-0"></label>
+                        <input asp-for="CIC" class="form-control" />
+                        <span asp-validation-for="CIC" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="CIC" class="control-label m-0"></label>
+                        <input asp-for="CIC" class="form-control" />
+                        <span asp-validation-for="CIC" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="CIC" class="control-label m-0"></label>
+                        <input asp-for="CIC" class="form-control" />
+                        <span asp-validation-for="CIC" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="CIC" class="control-label m-0"></label>
+                        <input asp-for="CIC" class="form-control" />
+                        <span asp-validation-for="CIC" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="CIC" class="control-label m-0"></label>
+                        <input asp-for="CIC" class="form-control" />
+                        <span asp-validation-for="CIC" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="CIC" class="control-label m-0"></label>
+                        <input asp-for="CIC" class="form-control" />
+                        <span asp-validation-for="CIC" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="RG" class="control-label m-0"></label>
+                        <input asp-for="RG" class="form-control" />
+                        <span asp-validation-for="RG" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Crea" class="control-label m-0"></label>
+                        <input asp-for="Crea" class="form-control" />
+                        <span asp-validation-for="Crea" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Contrato" class="control-label m-0"></label>
+                        <input asp-for="Contrato" class="form-control" />
+                        <span asp-validation-for="Contrato" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Foto" class="control-label m-0"></label>
+                        <input asp-for="Foto" class="form-control" />
+                        <span asp-validation-for="Foto" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="EmDia" class="control-label m-0"></label>
+                        <input asp-for="EmDia" class="form-control" />
+                        <span asp-validation-for="EmDia" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Status" class="control-label m-0"></label>
+                        <input asp-for="Status" class="form-control" />
+                        <span asp-validation-for="Status" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Lista" class="control-label m-0"></label>
+                        <input asp-for="Lista" class="form-control" />
+                        <span asp-validation-for="Lista" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Carta" class="control-label m-0"></label>
+                        <input asp-for="Carta" class="form-control" />
+                        <span asp-validation-for="Carta" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="DataInc" class="control-label m-0"></label>
+                        <input asp-for="DataInc" class="form-control" />
+                        <span asp-validation-for="DataInc" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="form-group">
+                        <label asp-for="Status1" class="control-label m-0"></label>
+                        <input asp-for="Status1" class="form-control" />
+                        <span asp-validation-for="Status1" class="text-danger"></span>
+                    </div>
+                </div> 
+                <div class="col-sm-3 mt-md-4">
+                        <input type="submit" value="Salvar" class="btn btn-primary" />
+                        <a asp-action="Index" class="btn btn-dark form-inline">Voltar a Lista</a>
+                </div>
+            </div>
+            </div>
+    </form>
+    <div class="container">
+        <div class="row">
+           
+        </div>
+    </div>
+</body>
+</html>

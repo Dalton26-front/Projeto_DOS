@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Projeto DOS</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container-fluid mt-1">
+        <header>
+            <div class="container-fluid">
+              <a href="https://www.faap.br/" target="_blank"><img src="./img/FAAP_ArqMarcas_LOGO_FAAP.jpg" id="Img-Faap" style="max-width:10%; max-height:10%" /></a>  
+            </div>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-sm-1 p-0">
+                <div class="container-fluid">
+                    @*<a  asp-area="" asp-controller="Home" asp-action="Index"></a>*@
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav border-info flex-grow-1 float-left m-0">
+                            <li class="nav-justified m-1">
+                                <a class="btn btn-primary" asp-area="" asp-controller="MovNotas" asp-action="Index">Notas</a>
+                            </li>
+                            <li class="nav-justified m-1">
+                                <a class="btn btn-primary" asp-area="" asp-controller="Cadalus" asp-action="Index">Lista de Alunos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+        <div class="container-fluid">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container-fluid">
+                &copy; 2022 - Projeto_DOS - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @RenderSection("Scripts", required: false)
+</body>
+</html>
