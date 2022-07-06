@@ -1,0 +1,93 @@
+﻿@model Projeto_DOS.Models.Cadastro_Curso
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Excluir</title>
+</head>
+<body>
+    <div class="container-fluid bg-success p-sm-2 text-sm-center">
+        <h4>Tem certeza de que deseja excluir - @Html.DisplayFor(model => model.Descricao)</h4>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="CodCur" class="control-label"></label>
+                @Html.DisplayFor(model => model.CodCur)
+            </div>
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="Descricao" class="control-label"></label>
+                @Html.DisplayFor(model => model.Descricao)
+            </div>
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="Sigla" class="control-label"></label>
+                @Html.DisplayFor(model => model.Sigla)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="Ano" class="control-label"></label>
+                @Html.DisplayFor(model => model.Ano)
+            </div>
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="Inicio" class="control-label"></label>
+                @Html.DisplayFor(model => model.Inicio)
+            </div>
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="Fim" class="control-label"></label>
+                @Html.DisplayFor(model => model.Fim)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="Aluno" class="control-label"></label>
+                @Html.DisplayFor(model => model.Aluno)
+            </div>
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="CargaHor" class="control-label"></label>
+                @Html.DisplayFor(model => model.CargaHor)
+            </div>
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="Apelido" class="control-label"></label>
+                @Html.DisplayFor(model => model.Apelido)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="CodPro" class="control-label"></label>
+                @Html.DisplayFor(model => model.CodPro)
+            </div>
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="Hora1" class="control-label"></label>
+                @Html.DisplayFor(model => model.Hora1)
+            </div>
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="Hora2" class="control-label"></label>
+                @Html.DisplayFor(model => model.Hora2)
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="Valor" class="control-label"></label>
+                @Html.DisplayFor(model => model.Valor)
+            </div>
+            <div class="col-sm-4 justify-content-center">
+                <label asp-for="Classe" class="control-label"></label>
+                @Html.DisplayFor(model => model.Classe)
+            </div>
+        </div>    
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="ID" />
+            <input type="submit" value="Excluir" class="btn btn-danger" />
+            <a asp-action="Index" class="btn btn-dark">Voltar a Lista</a>
+        </form>
+    </div>
+</body>
+</html>

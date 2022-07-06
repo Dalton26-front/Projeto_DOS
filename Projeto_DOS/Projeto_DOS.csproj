@@ -22,10 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\CadCursoes\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\img\FAAP_ArqMarcas_LOGO_FAAP - Copia.svg" />
     <None Include="wwwroot\img\FAAP_ArqMarcas_LOGO_FAAP.jpg" />
     <None Include="wwwroot\img\FAAP_ArqMarcas_LOGO_FAAP.old.svg" />

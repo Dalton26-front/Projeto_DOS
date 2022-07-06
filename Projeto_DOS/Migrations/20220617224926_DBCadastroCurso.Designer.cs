@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Projeto_DOS.Data;
 
 namespace Projeto_DOS.Migrations
 {
     [DbContext(typeof(Projeto_DOSContext))]
-    partial class Projeto_DOSContextModelSnapshot : ModelSnapshot
+    [Migration("20220617224926_DBCadastroCurso")]
+    partial class DBCadastroCurso
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

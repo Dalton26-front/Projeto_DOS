@@ -1,0 +1,103 @@
+﻿@model Projeto_DOS.Models.Codcurso
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Edit</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h4 class="bg-success p-sm-2 text-sm-center">Código Curso</h4>
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label asp-for="CODCURSO" class="control-label m-0"></label>
+                            <input asp-for="CODCURSO" class="form-control" />
+                            <span asp-validation-for="CODCURSO" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label asp-for="TURMA" class="control-label m-0"></label>
+                            <input asp-for="TURMA" class="form-control" />
+                            <span asp-validation-for="TURMA" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label asp-for="LISTA" class="control-label m-0"></label>
+                            <input asp-for="LISTA" class="form-control" />
+                            <span asp-validation-for="LISTA" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="form-group">
+                            <label asp-for="DATAMOV" class="control-label m-0"></label>
+                            <input asp-for="DATAMOV" class="form-control" />
+                            <span asp-validation-for="DATAMOV" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mt-0">
+                        <div class="form-group">
+                            <label asp-for="DISCIPLINA" class="control-label m-0"></label>
+                            <input asp-for="DISCIPLINA" class="form-control" />
+                            <span asp-validation-for="DISCIPLINA" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mt-0">
+                        <div class="form-group">
+                            <label asp-for="SUBDIS" class="control-label m-0"></label>
+                            <input asp-for="SUBDIS" class="form-control" />
+                            <span asp-validation-for="SUBDIS" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 mt-0">
+                        <div class="form-group">
+                            <label asp-for="PROFESSOR" class="control-label m-0"></label>
+                            <input asp-for="PROFESSOR" class="form-control" />
+                            <span asp-validation-for="PROFESSOR" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mt-0">
+                        <div class="form-group">
+                            <label asp-for="CODDIS" class="control-label m-0"></label>
+                            <input asp-for="CODDIS" class="form-control" />
+                            <span asp-validation-for="CODDIS" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mt-0">
+                        <div class="form-group">
+                            <label asp-for="CODPRO" class="control-label m-0"></label>
+                            <input asp-for="CODPRO" class="form-control" />
+                            <span asp-validation-for="CODPRO" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="input-group">
+                            <input type="submit" value="Salvar" class="btn btn-primary" />
+                            <a class="btn btn-dark ml-1" asp-action="Index" />Voltar a Lista</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

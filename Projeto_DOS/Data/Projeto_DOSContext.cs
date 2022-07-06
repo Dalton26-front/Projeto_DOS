@@ -9,11 +9,12 @@ namespace Projeto_DOS.Data
 {
     public class Projeto_DOSContext : DbContext
     {
-        public Projeto_DOSContext (DbContextOptions<Projeto_DOSContext> options)
+        public Projeto_DOSContext(DbContextOptions<Projeto_DOSContext> options)
             : base(options)
         {
         }
-
         public DbSet<Projeto_DOS.Models.Cadalu> Cadalu { get; set; }
+        public DbSet<Projeto_DOS.Models.Codcurso> Codcur { get; set; }
+        public DbSet<Projeto_DOS.Models.Cadastro_Curso> Cadastro_Curso { get; set; }
     }
 }

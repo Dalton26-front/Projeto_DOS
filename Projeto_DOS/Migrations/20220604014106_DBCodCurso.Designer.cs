@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Projeto_DOS.Data;
 
 namespace Projeto_DOS.Migrations
 {
     [DbContext(typeof(Projeto_DOSContext))]
-    partial class Projeto_DOSContextModelSnapshot : ModelSnapshot
+    [Migration("20220604014106_DBCodCurso")]
+    partial class DBCodCurso
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -98,60 +100,6 @@ namespace Projeto_DOS.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Cadalu");
-                });
-
-            modelBuilder.Entity("Projeto_DOS.Models.Cadastro_Curso", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Aluno")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Ano")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Apelido")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CargaHor")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Classe")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CodCur")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CodPro")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Descricao")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Fim")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Hora1")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Hora2")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Inicio")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Sigla")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<float>("Valor")
-                        .HasColumnType("real");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Cadastro_Curso");
                 });
 
             modelBuilder.Entity("Projeto_DOS.Models.Codcurso", b =>

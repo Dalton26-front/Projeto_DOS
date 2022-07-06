@@ -1,0 +1,83 @@
+﻿@model Projeto_DOS.Models.Codcurso
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Detalhes</title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <h4 class="bg-success p-sm-2 text-sm-center">Código Curso</h4>
+        <div class="container">
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CODCURSO)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CODCURSO)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.TURMA)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.TURMA)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.LISTA)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.LISTA)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.DATAMOV)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.DATAMOV)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.DISCIPLINA)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.DISCIPLINA)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.SUBDIS)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.SUBDIS)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.PROFESSOR)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.PROFESSOR)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CODDIS)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CODDIS)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.CODPRO)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.CODPRO)
+                </dd>
+            </dl>
+            <div>
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.ID">Editar</a>
+                <a class="btn btn-dark" asp-action="Index">Voltar a Lista</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

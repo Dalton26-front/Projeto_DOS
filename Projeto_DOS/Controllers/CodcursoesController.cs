@@ -11,15 +11,14 @@ using X.PagedList;
 
 namespace Projeto_DOS.Controllers
 {
-    public class CadalusController : Controller
+    public class CodcursoesController : Controller
     {
         private readonly Projeto_DOSContext _context;
 
-        public CadalusController(Projeto_DOSContext context)
+        public CodcursoesController(Projeto_DOSContext context)
         {
             _context = context;
         }
-
         public ActionResult Index(string currentFilter, string searchString, int? page)
         {
             if (searchString != null)
@@ -33,73 +32,74 @@ namespace Projeto_DOS.Controllers
 
             ViewBag.CurrentFilter = searchString;
 
-            var CadAluno = from s in _context.Cadalu
+            var Disciplina = from s in _context.Codcur
                            select s;
             if (!String.IsNullOrEmpty(searchString))
             {
-                CadAluno = CadAluno.Where(s => s.Nome.Contains(searchString)
-                                       || s.CodCuR.Contains(searchString));
+                Disciplina = Disciplina.Where(s => s.CODCURSO.Contains(searchString)
+                                       || s.DISCIPLINA.Contains(searchString) 
+                                       || s.PROFESSOR.Contains(searchString));
             }
-
             int pageSize = 10;
             int pageNumber = (page ?? 1);
-            return View(CadAluno.ToPagedList(pageNumber, pageSize));
+            return View(Disciplina.ToPagedList(pageNumber, pageSize));
         }
-   
-        public async Task<IActionResult> DTDetalhes(int? id)
+     
+        public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var cadalu = await _context.Cadalu
+            var codcurso = await _context.Codcur
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (cadalu == null)
+            if (codcurso == null)
             {
                 return NotFound();
             }
 
-            return View(cadalu);
+            return View(codcurso);
         }
 
-        public IActionResult DTCriar()
+        public IActionResult Create()
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DTCriar([Bind("ID,NFicha,NoCIC,CodCuR,Turma,CodAlu,Nome,Apelido,Fpag,Dia,Curri,Certi,Histo,CIC,RG,Crea,Contrato,Foto,EmDia,Status,Lista,Carta,DataInc,Status1")] Cadalu cadalu)
+        public async Task<IActionResult> Create([Bind("ID,CODCURSO,TURMA,LISTA,DATAMOV,DISCIPLINA,SUBDIS,PROFESSOR,CODDIS,CODPRO")] Codcurso codcurso)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(cadalu);
+                _context.Add(codcurso);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(cadalu);
+            return View(codcurso);
         }
 
-        public async Task<IActionResult> DTEditar(int? id)
+        public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var cadalu = await _context.Cadalu.FindAsync(id);
-            if (cadalu == null)
+            var codcurso = await _context.Codcur.FindAsync(id);
+            if (codcurso == null)
             {
                 return NotFound();
             }
-            return View(cadalu);
+            return View(codcurso);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DTEditar(int id, [Bind("ID,NFicha,NoCIC,CodCuR,Turma,CodAlu,Nome,Apelido,Fpag,Dia,Curri,Certi,Histo,CIC,RG,Crea,Contrato,Foto,EmDia,Status,Lista,Carta,DataInc,Status1")] Cadalu cadalu)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,CODCURSO,TURMA,LISTA,DATAMOV,DISCIPLINA,SUBDIS,PROFESSOR,CODDIS,CODPRO")] Codcurso codcurso)
         {
-            if (id != cadalu.ID)
+            if (id != codcurso.ID)
             {
                 return NotFound();
             }
@@ -108,12 +108,12 @@ namespace Projeto_DOS.Controllers
             {
                 try
                 {
-                    _context.Update(cadalu);
+                    _context.Update(codcurso);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CadaluExists(cadalu.ID))
+                    if (!CodcursoExists(codcurso.ID))
                     {
                         return NotFound();
                     }
@@ -124,39 +124,39 @@ namespace Projeto_DOS.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(cadalu);
+            return View(codcurso);
         }
 
-        public async Task<IActionResult> DTExcluir(int? id)
+      public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var cadalu = await _context.Cadalu
+            var codcurso = await _context.Codcur
                 .FirstOrDefaultAsync(m => m.ID == id);
-            if (cadalu == null)
+            if (codcurso == null)
             {
                 return NotFound();
             }
 
-            return View(cadalu);
+            return View(codcurso);
         }
 
-        [HttpPost, ActionName("DTExcluir")]
+        [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var cadalu = await _context.Cadalu.FindAsync(id);
-            _context.Cadalu.Remove(cadalu);
+            var codcurso = await _context.Codcur.FindAsync(id);
+            _context.Codcur.Remove(codcurso);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool CadaluExists(int id)
+        private bool CodcursoExists(int id)
         {
-            return _context.Cadalu.Any(e => e.ID == id);
+            return _context.Codcur.Any(e => e.ID == id);
         }
     }
 }

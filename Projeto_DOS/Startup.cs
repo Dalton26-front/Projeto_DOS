@@ -64,7 +64,7 @@ namespace Projeto_DOS
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Cadalus}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

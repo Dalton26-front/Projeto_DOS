@@ -1,0 +1,94 @@
+﻿@model X.PagedList.IPagedList<Projeto_DOS.Models.Cadastro_Curso>
+@using X.PagedList.Mvc.Core;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="./css/Content/PagedList.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/Content/bootstrap/css/bootstrap.min.css" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/site.css" />
+    <title>Index</title>
+</head>
+<body>
+    @{
+        Layout = "_Layout";
+    }
+    <div class="container-fluid">
+        @using (Html.BeginForm("Index", "Cadastro_Cursos", FormMethod.Get))
+        {
+        <div class="row mb-1 mt-1">
+            <div class="col-sm-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Pesquisar Aluno" name="SearchString" />
+                    <input class="btn btn-dark ml-1" type="submit" value="Pesquisar" />
+                </div>
+            </div>
+        </div>
+        }
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr class="text-center bg-info">
+                    <td>Código Curso</td>
+                    <td>Descricão</td>
+                    <td>Sigla</td>
+                    <td>Ano</td>
+                    <td>Inicio</td>
+                    <td>Fim</td>
+                    <td>Carga Horária</td>
+                    <td>Apelido</td>
+                    <td>Ações</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="text-center">
+                        <td class="p-sm-0">
+                            @Html.DisplayFor(modelItem => item.CodCur)
+                        </td>
+                        <td class="p-sm-0">
+                            @Html.DisplayFor(modelItem => item.Descricao)
+                        </td>
+                        <td class="p-sm-0">
+                            @Html.DisplayFor(modelItem => item.Sigla)
+                        </td>
+                        <td class="p-sm-0">
+                            @Html.DisplayFor(modelItem => item.Ano)
+                        </td>
+                        <td class="p-sm-0 mt-0 mb-0">
+                            @Html.DisplayFor(modelItem => item.Inicio)
+                        </td>
+                        <td class="p-sm-0 mt-0 mb-0">
+                            @Html.DisplayFor(modelItem => item.Fim)
+                        </td>
+                        <td class="p-sm-0">
+                            @Html.DisplayFor(modelItem => item.CargaHor)
+                        </td>
+                        <td class="p-sm-0">
+                            @Html.DisplayFor(modelItem => item.Apelido)
+                        </td>
+                        <td class="p-sm-0">
+                            <a asp-action="Edit" asp-route-id="@item.ID">Editar</a>
+                            <a asp-action="Details" asp-route-id="@item.ID">Detalhes</a>
+                            <a asp-action="Delete" asp-route-id="@item.ID">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>      
+</div>
+    <div class="container-fluid">
+        <div class="float-right">
+            <strong>Página: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount</strong>
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+﻿@model Projeto_DOS.Models.Cadastro_Curso
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <title>Edit</title>
+</head>
+<body>
+    <div class="container">
+        <h4 class="bg-success p-sm-2 text-sm-center">Cadastro Curso</h4>
+    </div>
+ <form asp-action="Edit">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="ID" />
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="CodCur" class="control-label m-0"></label>
+                                    <input asp-for="CodCur" class="form-control" />
+                                    <span asp-validation-for="CodCur" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="Descricao" class="control-label m-0"></label>
+                                    <input asp-for="Descricao" class="form-control" />
+                                    <span asp-validation-for="Descricao" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="Sigla" class="control-label m-0"></label>
+                                    <input asp-for="Sigla" class="form-control" />
+                                    <span asp-validation-for="Sigla" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="Ano" class="control-label m-0"></label>
+                                    <input asp-for="Ano" class="form-control" />
+                                    <span asp-validation-for="Ano" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="Inicio" class="control-label m-0"></label>
+                                    <input asp-for="Inicio" class="form-control" />
+                                    <span asp-validation-for="Inicio" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="Fim" class="control-label m-0"></label>
+                                    <input asp-for="Fim" class="form-control" />
+                                    <span asp-validation-for="Fim" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="Aluno" class="control-label m-0"></label>
+                                    <input asp-for="Aluno" class="form-control" />
+                                    <span asp-validation-for="Aluno" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="CargaHor" class="control-label m-0"></label>
+                                    <input asp-for="CargaHor" class="form-control" />
+                                    <span asp-validation-for="CargaHor" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="Apelido" class="control-label m-0"></label>
+                                    <input asp-for="Apelido" class="form-control" />
+                                    <span asp-validation-for="Apelido" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="CodPro" class="control-label m-0"></label>
+                                    <input asp-for="CodPro" class="form-control" />
+                                    <span asp-validation-for="CodPro" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="Hora1" class="control-label m-0"></label>
+                                    <input asp-for="Hora1" class="form-control" />
+                                    <span asp-validation-for="Hora1" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="Hora2" class="control-label m-0"></label>
+                                    <input asp-for="Hora2" class="form-control" />
+                                    <span asp-validation-for="Hora2" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="Valor" class="control-label m-0"></label>
+                                    <input asp-for="Valor" class="form-control" />
+                                    <span asp-validation-for="Valor" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label asp-for="Classe" class="control-label m-0"></label>
+                                    <input asp-for="Classe" class="form-control" />
+                                    <span asp-validation-for="Classe" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 mt-md-4">
+                                <input type="submit" value="Salvar" class="btn btn-primary" />
+                                <a asp-action="Index" class="btn btn-dark form-inline">Voltar a Lista</a>
+                            </div>
+                        </div>
+                    </div>                                
+</form>
+</body>
+</html>
