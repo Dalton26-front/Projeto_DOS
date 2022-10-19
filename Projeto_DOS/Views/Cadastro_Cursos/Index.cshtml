@@ -4,17 +4,14 @@
 @{
     Layout = null;
 }
-
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
     <meta name="viewport" content="width=device-width" />
     <link href="./css/Content/PagedList.css" rel="stylesheet" type="text/css" />
-    <link href="~/css/Content/bootstrap/css/bootstrap.min.css" />
-    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link href="~/css/site.css" />
-    <title>Index</title>
+    <title>Cadastros de Cursos</title>
 </head>
 <body>
     @{
@@ -26,7 +23,7 @@
         <div class="row mb-1 mt-1">
             <div class="col-sm-3">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Pesquisar Aluno" name="SearchString" />
+                    <input type="text" class="form-control" placeholder="Pesquisar Aluno" name="SearchString" autocomplete="off" />
                     <input class="btn btn-dark ml-1" type="submit" value="Pesquisar" />
                 </div>
             </div>

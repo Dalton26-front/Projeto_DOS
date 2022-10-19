@@ -11,10 +11,11 @@
     <title>Detalhes</title>
 </head>
 <body>
-    <div class="container-fluid bg-success p-sm-2 text-sm-center">
-        <h3>Detalhes - @Html.DisplayFor(model => model.Descricao)</h3>
-    </div>
-    <div class="container-fluid">
+    
+    <div class="container">
+        <div class="container-fluid bg-success p-sm-2 text-sm-center">
+            <h3>Detalhes - @Html.DisplayFor(model => model.Descricao)</h3>
+        </div>
         <div class="row">
             <div class="col-sm-3 justify-content-center">
                 <label asp-for="CodCur" class="control-label"></label>
@@ -80,7 +81,7 @@
             </div>
         </div>
     </div>
-        <div class="container-fluid">
+        <div class="container">
             <a asp-action="Edit" class="btn btn-primary" asp-route-id="@Model.ID">Editar</a>
             <a asp-action="Index" class="btn btn-dark">Voltar a Lista</a>
         </div>

@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Projeto_DOS.Data;
+using Projeto_DOS.Services;
 
 namespace Projeto_DOS
 {
@@ -31,6 +32,7 @@ namespace Projeto_DOS
 
             services.AddDbContext<Projeto_DOSContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("Projeto_DOSContext")));
+            services.AddScoped<CadaluService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

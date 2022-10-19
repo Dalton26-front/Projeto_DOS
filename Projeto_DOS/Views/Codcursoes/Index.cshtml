@@ -1,16 +1,13 @@
 ﻿@model X.PagedList.IPagedList<Projeto_DOS.Models.Codcurso>
 @using X.PagedList.Mvc.Core;
 
-@{
-    Layout = null;
-}
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
     <meta name="viewport" content="width=device-width" />
     <link href="./css/Content/PagedList.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/Content/bootstrap/css/bootstrap.min.css" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
     <link href="~/css/site.css" />
     <title>Disciplina</title>
 </head>
@@ -24,7 +21,7 @@
             <div class="row mb-1 mt-1">
                 <div class="col-sm-3">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Pesquisar Aluno" name="SearchString" />
+                        <input type="text" class="form-control" placeholder="Pesquisar Aluno" name="SearchString" autocomplete="off" />
                         <input class="btn btn-dark ml-1" type="submit" value="Pesquisar" />
                     </div>
                 </div>
@@ -33,34 +30,15 @@
         <table class="table table-bordered table-hover">
             <thead>
                 <tr class="text-center bg-info p-0">
-                    <th>
-                        Código do Curso
-                    </th>
-                    <th>
-                        Turma
-                    </th>
-                    <th>
-                        Lista
-                    </th>
-                    <th>
-                        Data Movimetação
-                    </th>
-                    <th>
-                        Disciplina
-                    </th>
-                    <th>
-                        Susb
-                    </th>
-                    <th>
-                        Professor
-                    </th>
-                    <th>
-                        Código Disciplina
-                    </th>
-                    @*<th>
-                        Código Produto
-                    </th>*@
-                    <th>Ações</th>
+                    <td>Código do Curso</td>
+                    <td>Turma</td>
+                    <td>Lista</td>
+                    <td>Data Movimetação</td>
+                    <td>Disciplina</td>
+                    <td>Susb</td>
+                    <td>Professor</td>
+                    <td>Código Disciplina</td>
+                    <td>Ações</td>
                 </tr>
             </thead>
             <tbody>
@@ -91,9 +69,6 @@
                         <td class="p-0 m-0">
                             @Html.DisplayFor(modelItem => item.CODDIS)
                         </td>
-                        @*<td class="p-0 m-0">
-                            @Html.DisplayFor(modelItem => item.CODPRO)
-                        </td>*@
                         <td class="p-sm-0">
                             <a asp-action="Edit" asp-route-id="@item.ID">Editar</a>
                             <a asp-action="Details" asp-route-id="@item.ID">Detalhes</a>
@@ -110,5 +85,6 @@
                 @Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
             </div>
         </div>
+    @*<script src="~/js/site.js"></script>*@
 </body>
 </html>

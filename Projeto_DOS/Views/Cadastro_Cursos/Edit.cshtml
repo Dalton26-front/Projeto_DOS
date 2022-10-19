@@ -10,11 +10,11 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <title>Edit</title>
+    <title>Editar</title>
 </head>
 <body>
     <div class="container">
-        <h4 class="bg-success p-sm-2 text-sm-center">Cadastro Curso</h4>
+        <h4 class="bg-success p-sm-2 text-sm-center">Atualizar Curso @Html.DisplayFor(model => model.CodCur)</h4>
     </div>
  <form asp-action="Edit">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>

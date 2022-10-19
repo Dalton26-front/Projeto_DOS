@@ -13,10 +13,11 @@
     <title>Excluir</title>
 </head>
 <body>
-    <div class="container-fluid bg-success p-sm-2 text-sm-center">
-        <h4>Tem certeza de que deseja excluir - @Html.DisplayFor(model => model.Descricao)</h4>
-    </div>
-    <div class="container-fluid">
+   
+    <div class="container">
+        <div class="container-fluid bg-success p-sm-2 text-sm-center">
+            <h4>Tem certeza de que deseja excluir - @Html.DisplayFor(model => model.Descricao)</h4>
+        </div>
         <div class="row">
             <div class="col-sm-4 justify-content-center">
                 <label asp-for="CodCur" class="control-label"></label>
@@ -82,7 +83,7 @@
                 <label asp-for="Classe" class="control-label"></label>
                 @Html.DisplayFor(model => model.Classe)
             </div>
-        </div>    
+        </div>
         <form asp-action="Delete">
             <input type="hidden" asp-for="ID" />
             <input type="submit" value="Excluir" class="btn btn-danger" />

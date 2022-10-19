@@ -31,7 +31,7 @@ namespace Projeto_DOS.Models
         public string CodPro { get; set; }
         [Display(Name = "Hora - 1:")]
         public string Hora1 { get; set; }
-        [Display(Name = "Hpra - 2:")]
+        [Display(Name = "Hora - 2:")]
         public string Hora2 { get; set; }
         [Display(Name ="Valor:")]
         public float Valor { get; set; }
