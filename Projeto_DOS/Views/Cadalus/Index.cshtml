@@ -18,10 +18,11 @@
     <div class="container-fluid">
         @using (Html.BeginForm("Index", "Cadalus", FormMethod.Get))
         {
+            <span>* Procure por Professor / Código do Curso / Disciplina</span>
             <div class="row mt-1 mb-1">
                 <div class="col-sm-3">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Pesquisar Aluno" name="SearchString" autocomplete="off"/>
+                        <input type="text" class="form-control" name="SearchString" autocomplete="off" />
                         <input class="btn btn-dark ml-1" type="submit" value="Pesquisar" />
                     </div>
                 </div>
@@ -34,7 +35,7 @@
                     <td>CPF</td>
                     <td>Código Curso</td>
                     <td>Código Aluno</td>
-                    <td>Nome</td>
+                    <td>Professor</td>
                     <td>Forma de Pagamento</td>
                     <td>Dia</td>
                     <td>Ações</td>

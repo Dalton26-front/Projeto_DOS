@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Projeto_DOS.Data;
 using Projeto_DOS.Models;
 using Projeto_DOS.Services;
-using Projeto_DOS.Models.ViewModels;
 using SalesWebMvc.Services.Exceptions;
 using X.PagedList;
 
